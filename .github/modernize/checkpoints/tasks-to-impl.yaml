@@ -1,0 +1,10 @@
+checkpoint:
+  batch: initial-website
+  status: complete
+  requirements:
+    - public website routes
+    - responsive professional design
+    - central firm data placeholders
+    - enquiry API
+    - protected endpoint placeholders
+    - no fake firm facts

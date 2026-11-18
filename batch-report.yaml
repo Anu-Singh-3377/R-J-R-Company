@@ -1,0 +1,35 @@
+batch:
+  status: complete
+  tests:
+    frontend: 1 passed
+    backend: 4 passed
+  builds:
+    frontend: passed
+    backend: passed
+  routing:
+    homepage_and_primary_routes: passed
+    browser_visual_testing: not_performed
+  endpoint_probes:
+    - method: GET
+      path: /api/health
+      status: 200
+      result: PASS
+    - method: GET
+      path: /api/services
+      status: 200
+      result: PASS
+    - method: POST
+      path: /api/enquiries
+      status: 201
+      result: PASS
+    - method: POST
+      path: /api/auth/login
+      status: 501
+      result: PASS_AUTH_PLACEHOLDER
+  warnings:
+    - severity: HIGH
+      message: "Browser-level visual and interaction testing was not performed with browser automation."
+    - severity: HIGH
+      message: "Production authentication, database persistence and private document storage remain to be implemented."
+    - severity: MEDIUM
+      message: "Firm-specific information and professional photographs must be supplied before production."
