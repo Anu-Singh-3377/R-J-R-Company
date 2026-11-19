@@ -107,6 +107,54 @@ export default function Legal({ kind = 'privacy' }) {
         </>
       ),
     },
+    terms: {
+      title: 'Terms of Use',
+      eyebrow: 'Website Terms & Conditions',
+      description: 'Terms governing the access, navigation, and informational use of the RJR & Company website.',
+      body: (
+        <>
+          <h2>1. Acceptance of Terms</h2>
+          <p>
+            By accessing or browsing this website (www.rjrcompany.in), you acknowledge that you have read, understood, and agreed to be bound by these Terms of Use and the statutory ICAI disclaimer. If you do not agree with any part of these terms, please refrain from using this website.
+          </p>
+
+          <h2>2. Informational Character of Website Content</h2>
+          <p>
+            All materials, circular summaries, compliance calendars, checklists, and guidance notes published on this website are provided strictly for general informational reference at the user's voluntary request. The content does not constitute audit, taxation, legal, investment, or statutory professional advice.
+          </p>
+
+          <h2>3. No Professional-Client Relationship</h2>
+          <p>
+            Viewing this website, downloading worksheets, or communicating through general enquiry forms does not establish a Chartered Accountant-client relationship between RJR & Company and the user. A formal professional engagement commences only upon mutual execution of an official engagement letter specifying terms and scope in conformity with ICAI guidelines.
+          </p>
+
+          <h2>4. Intellectual Property & Permitted Use</h2>
+          <p>
+            The design, text layout, graphics, compilation, and published guidance notes on this website are proprietary to RJR & Company unless otherwise noted. Users may view, print, or download informational content for personal or internal business compliance reference, provided no proprietary notices are removed or altered.
+          </p>
+
+          <h2>5. User Submissions & Confidentiality</h2>
+          <p>
+            Users agree not to transmit unlawful, defamatory, or harmful content through website contact mechanisms. General enquiry forms are not intended for transmitting sensitive financial access credentials (such as net banking passwords, Aadhaar numbers, or OTPs).
+          </p>
+
+          <h2>6. Third-Party Portals & Hyperlinks</h2>
+          <p>
+            Hyperlinks to statutory government platforms (including Income Tax e-Filing, GST Portal, MCA, ICAI, and DGFT) are provided solely for user convenience. RJR & Company does not control, guarantee, or assume responsibility for the operational availability or content of external third-party portals.
+          </p>
+
+          <h2>7. Limitation of Liability</h2>
+          <p>
+            While we endeavor to keep statutory information and compliance calendars accurate and updated, statutory rules and gazette notifications are subject to rapid legislative amendment. RJR & Company shall not be liable for any direct, indirect, or consequential loss resulting from reliance on website materials without independent professional verification.
+          </p>
+
+          <h2>8. Governing Law & Jurisdiction</h2>
+          <p>
+            These Terms of Use shall be governed by and construed in accordance with the laws of India, subject to the exclusive jurisdiction of the competent courts of India.
+          </p>
+        </>
+      ),
+    },
   };
 
   const current = contentMap[kind] || contentMap.privacy;

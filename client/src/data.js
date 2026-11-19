@@ -9,14 +9,22 @@ import contactOffice from './assets/images/contact/contact-office.jpg';
 
 export const firmData = {
   name: 'R J R & Company',
+  shortName: 'RJR & Company',
   type: 'Chartered Accountants',
   tagline: 'Professional services across accounting, taxation, audit and regulatory compliance.',
-  establishmentYear: '[TO BE PROVIDED]',
-  headOffice: '[TO BE PROVIDED]',
+  headline: 'Audit, Taxation, and Financial Advisory.',
+  heroDescription: 'Providing structured statutory compliance, assurance, and strategic advisory services to corporations, SMEs, startups, and non-profit entities across India.',
+  establishmentYear: '[Year]',
+  headOffice: '[City, State]',
+  branchOffice: '[City, State]',
+  frn: '[Insert verified FRN]',
+  peerReviewStatus: '[Insert status/details if applicable]',
+  empanelment: '[Insert verified empanelment details if applicable]',
   phone: '[TO BE PROVIDED]',
   email: '[TO BE PROVIDED]',
   officeHours: '[TO BE PROVIDED]',
   googleMapsUrl: '', // To be updated once location coordinates are supplied
+  corePhilosophy: 'Our approach is grounded in accuracy, regulatory discipline, confidentiality, and timely execution. We work through structured processes designed to provide clarity, maintain appropriate documentation, and support informed financial and business decisions.',
 };
 
 export const images = {
@@ -54,6 +62,12 @@ export const officialResources = [
     description: 'Official government portal for company and LLP incorporations, statutory annual filings, and DIN/DIR verifications.',
     url: 'https://www.mca.gov.in',
     category: 'Corporate Affairs'
+  },
+  {
+    name: 'Directorate General of Foreign Trade (DGFT)',
+    description: 'Official government portal for Import Export Code (IEC) issuance, trade policies, export incentive schemes, and customs licenses.',
+    url: 'https://www.dgft.gov.in',
+    category: 'Foreign Trade'
   }
 ];
 
@@ -554,3 +568,476 @@ export const partnerData = {
   professionalExperience: '[TO BE PROVIDED]',
   note: 'Partner credentials and designated profile photographs will be updated once officially furnished by the firm.'
 };
+
+export const socialLinks = {
+  linkedin: '[Official LinkedIn URL]', // To be updated once official company LinkedIn profile is furnished
+};
+
+export const icaiDisclaimerText =
+  "Disclaimer: As per the guidelines of the Institute of Chartered Accountants of India (ICAI), Chartered Accountants are not permitted to solicit work and advertise. By accessing this website (www.rjrcompany.in), the user acknowledges that the information provided is solely for informational purposes and is being made available at the user's specific request. Nothing on this website constitutes an advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from RJR & Company or any of its members.";
+
+export const officeInfo = {
+  name: 'RJR & Company',
+  type: 'Chartered Accountants',
+  headOfficeTitle: 'Head Office',
+  address: '[Office Address line 1, Building Name, Street / Landmark, City, State — PIN Code] [TO BE PROVIDED]',
+  city: '[City, State] [TO BE PROVIDED]',
+  state: '[State] [TO BE PROVIDED]',
+  pinCode: '[PIN Code] [TO BE PROVIDED]',
+  phone: '[Office Phone / Landline] [TO BE PROVIDED]',
+  email: '[Official Firm Email] [TO BE PROVIDED]',
+  workingHours: 'Monday to Saturday: 10:00 AM – 6:30 PM [Indicative / Subject to confirmation]',
+  sundayStatus: 'Closed',
+  googleMapsUrl: '', // Ready to embed once verified coordinates are supplied
+  complianceDisclaimer: 'Consultations and communications are conducted strictly in adherence to the Code of Ethics established by The Institute of Chartered Accountants of India (ICAI).'
+};
+
+export const complianceMonths = [
+  { key: '2026-10', label: 'October 2026', monthName: 'October', year: 2026 },
+  { key: '2026-11', label: 'November 2026', monthName: 'November', year: 2026 },
+  { key: '2026-12', label: 'December 2026', monthName: 'December', year: 2026 },
+  { key: '2027-01', label: 'January 2027', monthName: 'January', year: 2027 },
+];
+
+export const complianceCalendar = {
+  '2026-11': [
+    {
+      id: 'nov-07-tds',
+      date: '07 Nov 2026',
+      day: '07',
+      month: 'NOV',
+      compliance: 'TDS / TCS Deposit Challan (ITNS 281)',
+      category: 'TDS/TCS',
+      applicableTo: 'All Corporate & Non-Corporate Deductors',
+      description: 'Deposit of Tax Deducted at Source (TDS) and Tax Collected at Source (TCS) for transactions executed in October 2026.',
+      status: 'Completed',
+      extended: false
+    },
+    {
+      id: 'nov-11-gstr1',
+      date: '11 Nov 2026',
+      day: '11',
+      month: 'NOV',
+      compliance: 'GSTR-1 (Outward Supplies Return)',
+      category: 'GST',
+      applicableTo: 'Regular Taxpayers with Monthly Filing',
+      description: 'Filing of details of outward supplies of goods and services for October 2026 by taxpayers with turnover exceeding ₹5 Crore or opting for monthly filing.',
+      status: 'Completed',
+      extended: false
+    },
+    {
+      id: 'nov-13-iff',
+      date: '13 Nov 2026',
+      day: '13',
+      month: 'NOV',
+      compliance: 'GSTR-6 / IFF (Invoice Furnishing Facility)',
+      category: 'GST',
+      applicableTo: 'Input Service Distributors & QRMP Taxpayers',
+      description: 'Return filing for Input Service Distributors (ISD) and optional B2B invoice upload under Invoice Furnishing Facility for QRMP filers for October 2026.',
+      status: 'Completed',
+      extended: false
+    },
+    {
+      id: 'nov-15-form16a',
+      date: '15 Nov 2026',
+      day: '15',
+      month: 'NOV',
+      compliance: 'TDS Certificate Issuance (Form 16A)',
+      category: 'TDS/TCS',
+      applicableTo: 'All Deductors deducting tax other than salary',
+      description: 'Quarterly issuance of Form 16A certificates to deductees for tax deducted in the quarter ended 30 September 2026.',
+      status: 'Completed',
+      extended: false
+    },
+    {
+      id: 'nov-20-gstr3b',
+      date: '20 Nov 2026',
+      day: '20',
+      month: 'NOV',
+      compliance: 'GSTR-3B (Summary Return & Tax Payment)',
+      category: 'GST',
+      applicableTo: 'Regular Taxpayers with Monthly Filing',
+      description: 'Monthly summary return of outward and inward supplies along with payment of statutory tax liability for the month of October 2026.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'nov-25-pmt06',
+      date: '25 Nov 2026',
+      day: '25',
+      month: 'NOV',
+      compliance: 'GST PMT-06 Challan Payment',
+      category: 'GST',
+      applicableTo: 'Taxpayers under QRMP Scheme',
+      description: 'Deposit of 35% fixed sum or self-assessed tax liability for the month of October 2026 under the Quarterly Return Monthly Payment (QRMP) scheme.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'nov-30-challan280',
+      date: '30 Nov 2026',
+      day: '30',
+      month: 'NOV',
+      compliance: 'Equalisation Levy & Form 3CEAD Reporting',
+      category: 'Direct Tax',
+      applicableTo: 'Specified Corporate Entities & International MNEs',
+      description: 'Annual compliance filing for Equalisation Levy and Form 3CEAD under Section 286 for relevant multinational enterprise groups.',
+      status: 'Upcoming',
+      extended: false
+    }
+  ],
+  '2026-10': [
+    {
+      id: 'oct-07-tds',
+      date: '07 Oct 2026',
+      day: '07',
+      month: 'OCT',
+      compliance: 'TDS / TCS Deposit Challan (ITNS 281)',
+      category: 'TDS/TCS',
+      applicableTo: 'All Deductors',
+      description: 'Deposit of tax deducted/collected at source for transactions in September 2026.',
+      status: 'Completed',
+      extended: false
+    },
+    {
+      id: 'oct-11-gstr1',
+      date: '11 Oct 2026',
+      day: '11',
+      month: 'OCT',
+      compliance: 'GSTR-1 (Monthly Outward Supplies)',
+      category: 'GST',
+      applicableTo: 'Regular Monthly Filers',
+      description: 'Details of outward supplies of goods and services for September 2026.',
+      status: 'Completed',
+      extended: false
+    },
+    {
+      id: 'oct-20-gstr3b',
+      date: '20 Oct 2026',
+      day: '20',
+      month: 'OCT',
+      compliance: 'GSTR-3B (Summary Return & Tax Payment)',
+      category: 'GST',
+      applicableTo: 'Regular Monthly Taxpayers',
+      description: 'Summary return and statutory tax settlement for September 2026.',
+      status: 'Completed',
+      extended: false
+    },
+    {
+      id: 'oct-31-tds-q2',
+      date: '31 Oct 2026',
+      day: '31',
+      month: 'OCT',
+      compliance: 'Quarterly TDS/TCS Statement (Forms 24Q, 26Q, 27Q)',
+      category: 'TDS/TCS',
+      applicableTo: 'All Deductors',
+      description: 'Quarterly return filing for tax deducted at source during Q2 (July – September 2026).',
+      status: 'Completed',
+      extended: false
+    }
+  ],
+  '2026-12': [
+    {
+      id: 'dec-07-tds',
+      date: '07 Dec 2026',
+      day: '07',
+      month: 'DEC',
+      compliance: 'TDS / TCS Deposit Challan',
+      category: 'TDS/TCS',
+      applicableTo: 'All Deductors',
+      description: 'Deposit of tax deducted/collected at source for transactions in November 2026.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'dec-11-gstr1',
+      date: '11 Dec 2026',
+      day: '11',
+      month: 'DEC',
+      compliance: 'GSTR-1 Monthly Return',
+      category: 'GST',
+      applicableTo: 'Regular Monthly Filers',
+      description: 'Details of outward supplies of goods and services for November 2026.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'dec-15-advancetax',
+      date: '15 Dec 2026',
+      day: '15',
+      month: 'DEC',
+      compliance: 'Advance Tax 3rd Instalment (75% of total tax liability)',
+      category: 'Direct Tax',
+      applicableTo: 'All Assessees liable for Advance Tax (Corporate & Non-Corporate)',
+      description: 'Payment of third instalment (cumulative 75%) of advance income tax for Assessment Year 2027-28.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'dec-20-gstr3b',
+      date: '20 Dec 2026',
+      day: '20',
+      month: 'DEC',
+      compliance: 'GSTR-3B Monthly Return',
+      category: 'GST',
+      applicableTo: 'Regular Taxpayers with Monthly Filing',
+      description: 'Summary return and tax settlement for November 2026.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'dec-31-gstr9',
+      date: '31 Dec 2026',
+      day: '31',
+      month: 'DEC',
+      compliance: 'GST Annual Return (GSTR-9 & GSTR-9C Reconciliation)',
+      category: 'GST',
+      applicableTo: 'Taxpayers crossing statutory turnover thresholds for FY 2025-26',
+      description: 'Annual return and self-certified reconciliation statement for the preceding financial year.',
+      status: 'Upcoming',
+      extended: false
+    }
+  ],
+  '2027-01': [
+    {
+      id: 'jan-07-tds',
+      date: '07 Jan 2027',
+      day: '07',
+      month: 'JAN',
+      compliance: 'TDS / TCS Deposit Challan (ITNS 281)',
+      category: 'TDS/TCS',
+      applicableTo: 'All Deductors',
+      description: 'Deposit of tax deducted/collected at source for transactions in December 2026.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'jan-11-gstr1',
+      date: '11 Jan 2027',
+      day: '11',
+      month: 'JAN',
+      compliance: 'GSTR-1 Monthly Return',
+      category: 'GST',
+      applicableTo: 'Regular Monthly Filers',
+      description: 'Details of outward supplies of goods and services for December 2026.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'jan-20-gstr3b',
+      date: '20 Jan 2027',
+      day: '20',
+      month: 'JAN',
+      compliance: 'GSTR-3B Monthly Return',
+      category: 'GST',
+      applicableTo: 'Regular Monthly Filers',
+      description: 'Summary return and tax settlement for December 2026.',
+      status: 'Upcoming',
+      extended: false
+    },
+    {
+      id: 'jan-31-tds-q3',
+      date: '31 Jan 2027',
+      day: '31',
+      month: 'JAN',
+      compliance: 'Quarterly TDS Statement (Forms 24Q, 26Q, 27Q)',
+      category: 'TDS/TCS',
+      applicableTo: 'All Deductors',
+      description: 'Quarterly return filing for tax deducted at source during Q3 (October – December 2026).',
+      status: 'Upcoming',
+      extended: false
+    }
+  ]
+};
+
+export const regulatoryUpdates = [
+  {
+    id: 'reg-update-1',
+    authority: 'CBDT',
+    date: '18 Nov 2026',
+    title: 'Advisory on Reconciliation of High-Value Transactions in AIS / TIS',
+    category: 'Direct Tax',
+    summary: 'Central Board of Direct Taxes issued practical guidance on reviewing discrepancies between reported financial transactions and taxpayer self-disclosures.',
+    applicability: 'Individual and corporate assessees with reported foreign remittances, high-value securities transactions, or property dealings.',
+    sourceName: 'Income Tax Department (e-Filing Portal)',
+    sourceUrl: 'https://www.incometax.gov.in',
+    fullDetails: [
+      'The Income Tax Department provides taxpayers an opportunity to electronically submit feedback on reported information in the Annual Information Statement (AIS).',
+      'Assessees are encouraged to periodically review their AIS and Taxpayer Information Summary (TIS) before filing returns or responding to verification notices.',
+      'Reconciliation prior to return filing helps prevent automated computer-assisted scrutiny selection (CASS) notices.'
+    ]
+  },
+  {
+    id: 'reg-update-2',
+    authority: 'CBIC',
+    date: '14 Nov 2026',
+    title: 'Input Tax Credit (ITC) Verification & Auto-population under GSTR-2B',
+    category: 'GST',
+    summary: 'Standard operating procedure reaffirming that ITC entitlement is restricted to valid invoices uploaded by corresponding suppliers in GSTR-1/IFF.',
+    applicability: 'All regular registered GST businesses claiming input tax credit on purchases.',
+    sourceName: 'Central Board of Indirect Taxes and Customs (CBIC)',
+    sourceUrl: 'https://www.cbic.gov.in',
+    fullDetails: [
+      'Under Rule 36(4) of CGST Rules, registered persons cannot avail input tax credit unless corresponding details have been furnished by suppliers in Form GSTR-1 or using IFF.',
+      'Taxpayers must perform periodic 2B reconciliations to ensure non-compliant vendor invoices are identified and pursued before return filing.',
+      'Interest provisions under Section 50 apply on wrongful availment and utilisation of input tax credit.'
+    ]
+  },
+  {
+    id: 'reg-update-3',
+    authority: 'MCA',
+    date: '08 Nov 2026',
+    title: 'Annual Statutory Filings and Director KYC (DIR-3 KYC) Compliance Advisory',
+    category: 'Corporate Law',
+    summary: 'Ministry of Corporate Affairs advisory on the maintenance of active Director Identification Numbers (DINs) and timely compliance with financial statements filing.',
+    applicability: 'All incorporated Companies, LLPs, and individuals holding DIN/DPIN.',
+    sourceName: 'Ministry of Corporate Affairs (MCA Portal)',
+    sourceUrl: 'https://www.mca.gov.in',
+    fullDetails: [
+      'Holders of DIN are required to file Form DIR-3 KYC annually to maintain their DIN in active status.',
+      'Deactivated DINs prevent directors from filing statutory forms, participating in corporate board resolutions, or executing company filings.',
+      'Companies are advised to ensure compliance with Forms AOC-4 and MGT-7 within the prescribed statutory timeframe post-AGM.'
+    ]
+  },
+  {
+    id: 'reg-update-4',
+    authority: 'RBI',
+    date: '02 Nov 2026',
+    title: 'Reporting Guidelines for Cross-Border Transactions & Foreign Remittances',
+    category: 'FEMA/RBI',
+    summary: 'Reserve Bank of India reminder on compliance with Foreign Exchange Management Act (FEMA) reporting through the FIRMS portal.',
+    applicability: 'Companies receiving Foreign Direct Investment (FDI) or making Overseas Direct Investment (ODI).',
+    sourceName: 'Reserve Bank of India (RBI)',
+    sourceUrl: 'https://www.rbi.org.in',
+    fullDetails: [
+      'Reporting of foreign investment through Form FC-GPR and annual return on Foreign Liabilities and Assets (FLA) must strictly adhere to regulatory timelines.',
+      'Delay in filing reporting forms attracts Late Submission Fee (LSF) provisions under FEMA regulations.',
+      'Entities must ensure certified Chartered Accountant valuation certificates are enclosed where shares are allotted to non-residents.'
+    ]
+  },
+  {
+    id: 'reg-update-5',
+    authority: 'ICAI',
+    date: '28 Oct 2026',
+    title: 'Mandatory Unique Document Identification Number (UDIN) Verification',
+    category: 'Audit & Governance',
+    summary: 'ICAI notification reiterating mandatory generation and verification of UDIN for all audit reports, certifications, and attestations.',
+    applicability: 'Practicing Chartered Accountants and regulatory authorities verifying signed certificates.',
+    sourceName: 'The Institute of Chartered Accountants of India (ICAI)',
+    sourceUrl: 'https://www.icai.org',
+    fullDetails: [
+      'UDIN was introduced to curb the menace of fake certifications and fraudulent representation by unauthorized persons claiming to be Chartered Accountants.',
+      'Regulators, banks, and authorities can independently verify the authenticity of CA-attested documents by entering the 18-digit UDIN on the official verification portal.',
+      'Failure to generate UDIN within permissible timeframes amounts to professional misconduct under ICAI regulations.'
+    ]
+  }
+];
+
+export const officialGovernmentLinks = [
+  {
+    id: 'link-incometax',
+    name: 'Income Tax e-Filing Portal',
+    portalCategory: 'Direct Taxes',
+    description: 'Official portal for filing annual returns, checking tax credits (26AS/AIS), and direct tax compliance communications.',
+    url: 'https://www.incometax.gov.in',
+    badge: 'CBDT / Ministry of Finance'
+  },
+  {
+    id: 'link-gst',
+    name: 'Goods & Services Tax (GST) Portal',
+    portalCategory: 'Indirect Taxes',
+    description: 'Official portal for GST registration, return filing (GSTR-1, 3B, 9), input tax credit ledger review, and challan payments.',
+    url: 'https://www.gst.gov.in',
+    badge: 'CBIC / GSTN'
+  },
+  {
+    id: 'link-mca',
+    name: 'Ministry of Corporate Affairs (MCA)',
+    portalCategory: 'Corporate Governance',
+    description: 'Official government portal for company and LLP incorporations, statutory annual filings, and DIN/DIR verifications.',
+    url: 'https://www.mca.gov.in',
+    badge: 'MCA / Government of India'
+  },
+  {
+    id: 'link-icai',
+    name: 'Institute of Chartered Accountants of India (ICAI)',
+    portalCategory: 'Regulatory & Professional Standards',
+    description: 'Statutory body established by an Act of Parliament for regulating the profession of Chartered Accountants in India.',
+    url: 'https://www.icai.org',
+    badge: 'ICAI Statutory Authority'
+  },
+  {
+    id: 'link-dgft',
+    name: 'Directorate General of Foreign Trade (DGFT)',
+    portalCategory: 'Foreign Trade & Exim',
+    description: 'Official government portal for Import Export Code (IEC) issuance, trade policies, export incentive schemes, and customs licenses.',
+    url: 'https://www.dgft.gov.in',
+    badge: 'Ministry of Commerce & Industry'
+  }
+];
+
+export const jobOpenings = [
+  {
+    id: 'opening-ca-qualified',
+    title: 'Qualified Chartered Accountant',
+    category: 'Qualified CA',
+    department: 'Audit, Assurance & Tax Advisory',
+    location: '[City, State] / Head Office',
+    type: 'Full-time Professional',
+    eligibility: 'Member of the Institute of Chartered Accountants of India (ACA / FCA). Prior experience in statutory audit and direct/indirect taxation preferred.',
+    responsibilities: [
+      'Execution and review of statutory and tax audit assignments in accordance with ICAI Standards on Auditing.',
+      'Supervision of income tax and GST return computations, verification files, and regulatory replies.',
+      'Direct coordination with client accounting heads and corporate management on accounting compliance.',
+      'Guiding article trainees and audit staff on audit methodology, documentation, and working papers.'
+    ],
+    preferredSkills: [
+      'In-depth knowledge of Indian AS / AS and ICAI Standards on Auditing',
+      'Proficiency in direct tax provisions, TDS, and GST laws',
+      'Analytical aptitude with accounting and audit management tools'
+    ],
+    howToApply: 'Submit your resume and brief professional background using the application form below.'
+  },
+  {
+    id: 'opening-semi-qualified',
+    title: 'Semi-Qualified / Audit Assistant',
+    category: 'Semi-Qualified / Audit Assistant',
+    department: 'Accounting & Compliance',
+    location: '[City, State] / Head Office',
+    type: 'Full-time Professional',
+    eligibility: 'B.Com / M.Com / Semi-Qualified CA (Inter / IPCC) with practical knowledge in bookkeeping and compliance routines.',
+    responsibilities: [
+      'Preparation of primary accounting ledgers and bank reconciliation statements (BRS).',
+      'Assisting in the preparation of monthly GST summaries, TDS computations, and advance tax schedules.',
+      'Compilation of audit working papers, fixed asset registers, and verification schedules for partner review.',
+      'Supporting corporate secretarial filing schedules and statutory document indexing.'
+    ],
+    preferredSkills: [
+      'Practical proficiency in Tally, ERP, and advanced MS Excel',
+      'Basic understanding of TDS, GST, and corporate accounting rules',
+      'Disciplined record maintenance and attention to numerical accuracy'
+    ],
+    howToApply: 'Submit your CV with details of prior experience and academic background.'
+  },
+  {
+    id: 'opening-article-assistant',
+    title: 'ICAI Article Assistant',
+    category: 'Article Assistant',
+    department: 'Articleship Training Program',
+    location: '[City, State] / Head Office',
+    type: 'Articleship Trainee (ICAI Registered)',
+    eligibility: 'Eligible for Articleship registration as per ICAI norms (Cleared either or both Groups of CA Intermediate / Direct Entry).',
+    responsibilities: [
+      'Practical exposure to statutory audit vouching, ledger scrutiny, and physical inventory counts.',
+      'Assisting in computation of direct and indirect taxes, preparation of challans, and return drafts.',
+      'Learning compliance procedures under the Companies Act, LLP Act, and MCA filings.',
+      'Maintaining standardized audit working paper files and compliance dossiers under partner mentorship.'
+    ],
+    preferredSkills: [
+      'Genuine dedication to professional learning and ethical standards',
+      'Working knowledge of MS Office (Excel, Word)',
+      'Basic conceptual clarity in financial accounting and auditing'
+    ],
+    howToApply: 'Submit your academic credentials, ICAI registration details, and resume using the form below.'
+  }
+];

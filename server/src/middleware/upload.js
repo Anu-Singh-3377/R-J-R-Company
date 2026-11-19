@@ -21,3 +21,15 @@ export const upload = multer({
     }
   },
 });
+
+export const resumeUpload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+  fileFilter(_req, file, callback) {
+    if (file.mimetype === 'application/pdf') {
+      callback(null, true);
+    } else {
+      callback(new Error('Only PDF resumes (.pdf) are accepted. Please convert your resume to PDF format.'));
+    }
+  },
+});

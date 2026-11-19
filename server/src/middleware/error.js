@@ -8,7 +8,7 @@ export function errorHandler(error, _req, res, _next) {
     return res.status(400).json({ error: error.message });
   }
 
-  if (error.message && error.message.includes('Unsupported file type')) {
+  if (error.message && (error.message.includes('Unsupported file type') || error.message.includes('Only PDF resumes'))) {
     return res.status(400).json({ error: error.message });
   }
 

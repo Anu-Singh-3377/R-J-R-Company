@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Toast from './components/Toast';
 import CookieBanner from './components/CookieBanner';
+import DisclaimerModal from './components/DisclaimerModal';
 
 // Pages
 import Home from './pages/Home';
@@ -23,6 +24,7 @@ import Contact from './pages/Contact';
 import ClientLogin from './pages/ClientLogin';
 import ClientPortal from './pages/ClientPortal';
 import Legal from './pages/Legal';
+import Sitemap from './pages/Sitemap';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -47,7 +49,9 @@ export default function App() {
           {/* Main Core Routes */}
           <Route path="/" element={<Home onNotification={addToast} />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/practice-areas" element={<Services />} />
 
           {/* Specific Service Detail Routes */}
           <Route path="/services/audit-assurance" element={<ServiceDetail />} />
@@ -76,12 +80,15 @@ export default function App() {
           {/* Insights / Knowledge Center */}
           <Route path="/insights" element={<Insights />} />
           <Route path="/insights/:slug" element={<ArticleDetail />} />
+          <Route path="/knowledge-bank" element={<Insights />} />
+          <Route path="/knowledge-bank/:slug" element={<ArticleDetail />} />
 
           {/* Careers & Applications */}
           <Route path="/careers" element={<Careers onNotification={addToast} />} />
 
           {/* Contact Office */}
           <Route path="/contact" element={<Contact onNotification={addToast} />} />
+          <Route path="/contact-us" element={<Contact onNotification={addToast} />} />
 
           {/* Client Authentication & Secure Portal */}
           <Route path="/client-login" element={<ClientLogin onNotification={addToast} />} />
@@ -89,8 +96,11 @@ export default function App() {
 
           {/* Legal Disclaimers & Policies */}
           <Route path="/privacy" element={<Legal kind="privacy" />} />
+          <Route path="/terms" element={<Legal kind="terms" />} />
+          <Route path="/terms-of-use" element={<Legal kind="terms" />} />
           <Route path="/disclaimer" element={<Legal kind="disclaimer" />} />
           <Route path="/cookie-policy" element={<Legal kind="cookie" />} />
+          <Route path="/sitemap" element={<Sitemap />} />
 
           {/* 404 Route */}
           <Route path="*" element={<NotFound />} />
@@ -98,6 +108,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <DisclaimerModal />
       <CookieBanner />
       <Toast toasts={toasts} onDismiss={removeToast} />
     </div>

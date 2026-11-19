@@ -1,7 +1,7 @@
 import { store } from '../services/store.js';
 
 export function submitEnquiry(req, res) {
-  const { name, email, phone = '', service = '', message } = req.body;
+  const { name, organization = '', email, phone = '', service = '', message } = req.body;
 
   if (!name?.trim() || !email?.trim() || !message?.trim()) {
     return res.status(400).json({ error: 'Name, email and message are required.' });
@@ -13,6 +13,7 @@ export function submitEnquiry(req, res) {
 
   const record = store.addEnquiry({
     name: name.trim(),
+    organization: organization.trim(),
     email: email.trim(),
     phone: phone.trim(),
     service: service.trim(),

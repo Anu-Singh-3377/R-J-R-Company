@@ -1,72 +1,110 @@
 import { useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { X, Lock, PhoneCall, ShieldCheck } from 'lucide-react';
-import { firmData } from '../data';
 
-export default function MobileMenu({ isOpen, onClose, links = [] }) {
+export default function MobileMenu({
+  isOpen,
+  onClose,
+  links = [],
+  currentPath = '',
+  isItemActive = () => false,
+}) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      const handleKeyDown = (e) => {
+        if (e.key === 'Escape') onClose();
+      };
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+        document.body.style.overflow = '';
+      };
     } else {
       document.body.style.overflow = '';
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   return (
-    <div className="mobile-overlay" role="presentation" onClick={onClose}>
+    <div
+      className="mobile-overlay"
+      role="presentation"
+      onClick={onClose}
+    >
       <div
+        id="mobile-navigation-drawer"
         className="mobile-drawer"
         role="dialog"
         aria-modal="true"
-        aria-label="Site Navigation"
+        aria-label="Mobile Navigation"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mobile-drawer-header">
-          <div className="brand">
-            <span className="brand-mark">RJR</span>
-            <span className="brand-text">
-              <strong>{firmData.name}</strong>
-              <small>{firmData.type}</small>
+          <Link
+            to="/"
+            className="brand"
+            onClick={onClose}
+            aria-label="RJR & Company — Chartered Accountants"
+          >
+            <span className="brand-mark" aria-hidden="true">
+              <span className="brand-monogram">RJR</span>
             </span>
-          </div>
+            <span className="brand-text">
+              <strong className="firm-name">RJR & Company</strong>
+              <span className="firm-subtitle">Chartered Accountants</span>
+            </span>
+          </Link>
           <button
             type="button"
             className="mobile-close-btn"
-            aria-label="Close menu"
+            aria-label="Close navigation menu"
             onClick={onClose}
           >
             <X size={22} />
           </button>
         </div>
 
-        <nav className="mobile-nav-links" aria-label="Mobile navigation">
-          {links.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.end}
-              className={({ isActive }) => (isActive ? 'mobile-link active' : 'mobile-link')}
-              onClick={onClose}
-            >
-              {link.label}
-            </NavLink>
-          ))}
+        <nav className="mobile-nav-links" aria-label="Mobile primary navigation">
+          {links.map((link) => {
+            const active = isItemActive(currentPath, link.to);
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`mobile-link ${active ? 'active' : ''}`}
+                aria-current={active ? 'page' : undefined}
+                onClick={onClose}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="mobile-drawer-footer">
-          <Link to="/client-login" className="mobile-portal-btn" onClick={onClose}>
-            <Lock size={16} /> Client Login
+          <Link
+            to="/client-portal"
+            className={`mobile-portal-btn ${currentPath.startsWith('/client-portal') || currentPath.startsWith('/client-login') ? 'active' : ''}`}
+            onClick={onClose}
+          >
+            <Lock size={16} />
+            <span>Client Portal</span>
           </Link>
-          <Link to="/contact" className="mobile-contact-btn" onClick={onClose}>
-            <PhoneCall size={16} /> Contact Office
+
+          <Link
+            to="/contact"
+            className="mobile-contact-btn"
+            onClick={onClose}
+          >
+            <PhoneCall size={16} />
+            <span>Book an Appointment</span>
           </Link>
+
           <div className="mobile-compliance-tag">
-            <ShieldCheck size={14} /> Peer reviewed professional standards
+            <ShieldCheck size={14} />
+            <span>Peer reviewed professional standards</span>
           </div>
         </div>
       </div>
